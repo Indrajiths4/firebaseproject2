@@ -3,6 +3,7 @@ import './FormSection.css'
 import { app } from '../../firebaseConfig';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
+
 export const FormSection = () => {
     let auth = getAuth();
     const [data, setData] = useState({});

@@ -1,0 +1,28 @@
+.secondsection {
+    min-height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+.secondfirstSection {
+    padding-left: 30px;
+    margin-right: 30px;
+}
+.secondsecondsection {
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .secondsection {
+        flex-direction: column;
+    }
+    .secondfirstSection {
+        margin-top: 40px;
+        padding: 30px;
+    }
+}
+.secondfirstSection img {
+    max-width: 100%; 
+    height: auto; 
+}

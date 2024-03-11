@@ -1,0 +1,26 @@
+#navbar {
+    background: black;
+    height: 75px;
+    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.1);
+}
+#navbar a {
+    color: white;
+}
+#navbarNav {
+    justify-content: end;
+}
+.nav-item {
+    margin: 0 40px;
+}
+.navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+@media (max-width: 990px) {
+    .nav-item {
+        margin: 0;
+    }
+}

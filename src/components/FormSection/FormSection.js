@@ -32,7 +32,7 @@ export const FormSection = () => {
         <div>
             
     <form className="form">
-       <p className="form-title">Sign in to your account</p>
+       <p className="form-title">Signin to your account</p>
         <div className="input-container">
           <input name="email" placeholder="Enter email" onChange={(event) =>handleInput(event)}/>
           <span>

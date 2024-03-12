@@ -1,0 +1,16 @@
+.FirebaseTest {
+    min-height: 750px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FirebaseTest .input-fields {
+    margin: 10px;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

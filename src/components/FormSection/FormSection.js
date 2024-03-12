@@ -1,7 +1,7 @@
 import React from 'react'
 import './FormSection.css'
 import { app } from '../../firebaseConfig';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
 
 
@@ -14,16 +14,26 @@ export const FormSection = () => {
         setData({ ...data, ...newInput });
     };
     
-    const handleSubmit = (event) => {
+    const handleSignin = (event) => {
         event.preventDefault();
-        createUserWithEmailAndPassword(auth,data.email,data.password)
+        signInWithEmailAndPassword(auth,data.email,data.password)
         .then((response) => {
-            console.log(response.user)
+            console.log("Successfully Logged in")
         })
         .catch((err) => {
             console.log(err.message)
         })
     };
+    const handleSignup = (event) => {
+      event.preventDefault();
+      createUserWithEmailAndPassword(auth,data.email,data.password)
+      .then((response) => {
+          console.log(response.user)
+      })
+      .catch((err) => {
+          console.log(err.message)
+      })
+  };
 
 
 
@@ -41,8 +51,11 @@ export const FormSection = () => {
       <div className="input-container">
           <input name="password" placeholder="Enter password" onChange={(event) =>handleInput(event)}/>
         </div>
-         <button type="submit" className="submit" onClick={handleSubmit}>
+         <button type="submit" className="submit" onClick={handleSignin}>
         Sign in
+      </button>
+      <button type="submit" className="submit" onClick={handleSignup}>
+        Sign up
       </button>
 
       <p className="signup-link">

@@ -8,15 +8,16 @@ import { ThirdSection } from './components/ThirdSection/ThirdSection';
 import { FourthSection } from './components/FourthSection/FourthSection';
 import { FifthSection } from './components/FifthSection/FifthSection';
 import { FormSection } from './components/FormSection/FormSection';
+import { FirebaseTest } from './components/FirebaseTest/FirebaseTest';
 function App() {
   const [loading,setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 4000)
-  }, [])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 4000)
+  // }, [])
   return (
     
     <div>
@@ -31,7 +32,7 @@ function App() {
         <div class="shadow"></div>
     </div> : 
       
-      <><NavBar /><Hero /><SecondSection /><ThirdSection /><FourthSection /><FifthSection /> <FormSection/></> } 
+      <><NavBar /><Hero /><SecondSection /><ThirdSection /><FourthSection /><FifthSection /> <FormSection/> <FirebaseTest /></> } 
     </div> 
   );
 }
